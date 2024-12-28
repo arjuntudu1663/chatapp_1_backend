@@ -34,8 +34,6 @@ const Massege = mongoose.model("massege_chatapp",{
 })
 
 
-
-
 app.post("/register",async(req,res)=>{
     
    
@@ -145,6 +143,7 @@ app.post("/sendMassege",async(req,res)=>{
               massege:new_massege
 
             })
+            
             console.log(create_massege , "< ==== new massege creation response")
             res.json(create_massege)
             
@@ -204,7 +203,7 @@ app.post("/user_masseges",async (req,res)=>{
 
         console.log(response_2, "<================ users receivers")
         
-        
+        const new_list = []
 
         response_2.map((x)=>{
             new_list.push({"id":x.receiver,"name":x.receiverName})
@@ -216,6 +215,7 @@ app.post("/user_masseges",async (req,res)=>{
         console.log(response_3,"<==== after update ")
 
         res.json(response_3.masseges)
+
     }catch(e){}
 
 })
