@@ -2,12 +2,12 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose")
 const cors = require("cors");
-const { data } = require("react-router-dom");
+
 
 app.use(express.json());
 
 app.use(cors({
-    origin:["https://chatapp-final-3-frontendooo.vercel.app/"]
+    origin:["https://chatapp-final-3-frontendooo.vercel.app"]
 }))
 
 try{
