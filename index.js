@@ -7,7 +7,7 @@ const { data } = require("react-router-dom");
 app.use(express.json());
 
 app.use(cors({
-    origin:["http://localhost:3000","https://chatapp-final-3-frontendooo.vercel.app"]
+    origin:["https://chatapp-final-3-frontendooo.vercel.app/"]
 }))
 
 try{
